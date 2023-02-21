@@ -188,7 +188,7 @@ namespace GUI_Pril
                 this.arrayGrid.DefaultCellStyle.BackColor = Color.White;
             }
         }
-        /*Изменение темы интерфейса массива не работает*/
+        /*Изменение темы интерфейса массива*/
         private void DarkRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if(DarkRadioButton.Checked)
