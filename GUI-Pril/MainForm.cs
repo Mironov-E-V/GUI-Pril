@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI_Pril
-{
+{/*Работу выполнили Миронов и Звягин*/
     public partial class MainForm : Form
     {
         public MainForm()
         {
             InitializeComponent();
         }
-
+        /*Запрет на ввод всех символов кроме цифр*/
         private void RowsTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar) && e.KeyChar != 8)
@@ -24,6 +24,7 @@ namespace GUI_Pril
                 e.Handled = true;
             }
         }
+        /*Инициализация заполнения массива*/
         private void InizialButton_MouseClick(object sender, MouseEventArgs e)
         {
             if (RandomСheck.Checked == true)
@@ -70,12 +71,7 @@ namespace GUI_Pril
             }
             
         }
-
-        private void MaxVulueTextBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+        /*Нахождение максимального значения массива*/
         private void MaxButton_Click(object sender, EventArgs e)
         {
             int max = int.MinValue;
@@ -92,7 +88,7 @@ namespace GUI_Pril
             }
             MaxVulueTextBox.Text = Convert.ToString(max);
         }
-
+        /*Нахождение минимального значения массива*/
         private void MinButton_Click(object sender, EventArgs e)
         {
             int min = int.MaxValue;
@@ -109,6 +105,7 @@ namespace GUI_Pril
             }
             MinVulueTextBox.Text = Convert.ToString(min);
         }
+        /*Нахождение среднего арифметического значения массива*/
         private void MidButton_MouseClick(object sender, MouseEventArgs e)
         {
             int mid = 0;
@@ -122,7 +119,7 @@ namespace GUI_Pril
             mid /= Convert.ToInt32((RowsTextBox.Text)) + Convert.ToInt32((ColumnsTextBox.Text));
             MidleVulueTextBox.Text = Convert.ToString(mid);
         }
-
+        /*Нахождение суммы элементов массива*/
         private void SumButton_MouseClick(object sender, MouseEventArgs e)
         {
             int sum = 0;
@@ -135,7 +132,7 @@ namespace GUI_Pril
             }
             SumVulueTextBox.Text = Convert.ToString(sum);
         }
-
+        /*Переключение текста массива на голубой*/
         private void BlurBGRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (BlurBGRadioButton.Checked)
@@ -143,7 +140,7 @@ namespace GUI_Pril
                 this.arrayGrid.DefaultCellStyle.ForeColor = Color.Blue;
             }
         }
-
+        /*Переключение текста массива на зеленый*/
         private void GreenBGRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (GreenBGRadioButton.Checked)
@@ -151,13 +148,52 @@ namespace GUI_Pril
                 this.arrayGrid.DefaultCellStyle.ForeColor = Color.Green;
             }
         }
-
+        /*Переключение текста массива на черный*/
         private void BlackBGRadioButton_CheckedChanged_1(object sender, EventArgs e)
         {
             if (BlackBGRadioButton.Checked)
             {
                 this.arrayGrid.DefaultCellStyle.ForeColor = Color.Black;
             }
+        }
+        /*Изменение фона массива на чёрный*/
+        private void BGColorBlackRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (BGColorBlackRadioButton.Checked)
+            {
+                this.arrayGrid.DefaultCellStyle.BackColor = Color.Black;
+            }
+        }
+        /*Изменение фона массива на серый*/
+        private void BGColorGreyRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (BGColorGreyRadioButton.Checked)
+            {
+                this.arrayGrid.DefaultCellStyle.BackColor = Color.Gray;
+            }
+        }
+        /*Изменение фона массива на белый*/
+        private void BGColorWhiteRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (BGColorWhiteRadioButton.Checked)
+            {
+                this.arrayGrid.DefaultCellStyle.BackColor = Color.White;
+            }
+        }
+        /*Изменение темы интерфейса массива не работает*/
+        private void DarkRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if(DarkRadioButton.Checked)
+            {
+                this.InsertTabControl.ForeColor = Color.Gray;
+                this.InsertTabControl.BackColor = Color.DarkGray;
+            }
+        }
+
+        private void WhiteRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.InsertTabControl.ForeColor = Color.Black;
+            this.InsertTabControl.BackColor = Color.White;
         }
     }
 }
