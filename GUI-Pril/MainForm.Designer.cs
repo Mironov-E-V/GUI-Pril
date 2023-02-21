@@ -52,16 +52,28 @@ namespace GUI_Pril
             this.MinVulueLabel = new System.Windows.Forms.Label();
             this.MaxVulueLabel = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Interface = new System.Windows.Forms.GroupBox();
+            this.WhiteRadioButton = new System.Windows.Forms.RadioButton();
+            this.DarkRadioButton = new System.Windows.Forms.RadioButton();
+            this.BgColor = new System.Windows.Forms.GroupBox();
+            this.BGColorWhiteRadioButton = new System.Windows.Forms.RadioButton();
+            this.BGColorGreyRadioButton = new System.Windows.Forms.RadioButton();
+            this.BGColorBlackRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.GreenBGRadioButton = new System.Windows.Forms.RadioButton();
             this.BlackBGRadioButton = new System.Windows.Forms.RadioButton();
             this.BlurBGRadioButton = new System.Windows.Forms.RadioButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.CreatorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.arrayGrid)).BeginInit();
             this.InsertTabControl.SuspendLayout();
             this.FirstTabPage.SuspendLayout();
             this.SecondTabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.Interface.SuspendLayout();
+            this.BgColor.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // arrayGrid
@@ -80,6 +92,7 @@ namespace GUI_Pril
             this.InsertTabControl.Controls.Add(this.FirstTabPage);
             this.InsertTabControl.Controls.Add(this.SecondTabPage);
             this.InsertTabControl.Controls.Add(this.tabPage1);
+            this.InsertTabControl.Controls.Add(this.tabPage2);
             this.InsertTabControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.InsertTabControl.Location = new System.Drawing.Point(0, 0);
             this.InsertTabControl.Name = "InsertTabControl";
@@ -245,7 +258,6 @@ namespace GUI_Pril
             this.MaxVulueTextBox.Name = "MaxVulueTextBox";
             this.MaxVulueTextBox.Size = new System.Drawing.Size(100, 20);
             this.MaxVulueTextBox.TabIndex = 4;
-            this.MaxVulueTextBox.TextChanged += new System.EventHandler(this.MaxVulueTextBox_TextChanged);
             // 
             // SumVulueLabel
             // 
@@ -285,13 +297,98 @@ namespace GUI_Pril
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.Interface);
+            this.tabPage1.Controls.Add(this.BgColor);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(792, 164);
             this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "r";
+            this.tabPage1.Text = "Настройки";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // Interface
+            // 
+            this.Interface.Controls.Add(this.WhiteRadioButton);
+            this.Interface.Controls.Add(this.DarkRadioButton);
+            this.Interface.Location = new System.Drawing.Point(8, 117);
+            this.Interface.Name = "Interface";
+            this.Interface.Size = new System.Drawing.Size(334, 46);
+            this.Interface.TabIndex = 4;
+            this.Interface.TabStop = false;
+            this.Interface.Text = "Выбор темы";
+            // 
+            // WhiteRadioButton
+            // 
+            this.WhiteRadioButton.AutoSize = true;
+            this.WhiteRadioButton.Location = new System.Drawing.Point(187, 19);
+            this.WhiteRadioButton.Name = "WhiteRadioButton";
+            this.WhiteRadioButton.Size = new System.Drawing.Size(95, 17);
+            this.WhiteRadioButton.TabIndex = 1;
+            this.WhiteRadioButton.TabStop = true;
+            this.WhiteRadioButton.Text = "Светлая тема";
+            this.WhiteRadioButton.UseVisualStyleBackColor = true;
+            this.WhiteRadioButton.CheckedChanged += new System.EventHandler(this.WhiteRadioButton_CheckedChanged);
+            // 
+            // DarkRadioButton
+            // 
+            this.DarkRadioButton.AutoSize = true;
+            this.DarkRadioButton.Location = new System.Drawing.Point(27, 19);
+            this.DarkRadioButton.Name = "DarkRadioButton";
+            this.DarkRadioButton.Size = new System.Drawing.Size(92, 17);
+            this.DarkRadioButton.TabIndex = 0;
+            this.DarkRadioButton.TabStop = true;
+            this.DarkRadioButton.Text = "Тёмная тема";
+            this.DarkRadioButton.UseVisualStyleBackColor = true;
+            this.DarkRadioButton.CheckedChanged += new System.EventHandler(this.DarkRadioButton_CheckedChanged);
+            // 
+            // BgColor
+            // 
+            this.BgColor.Controls.Add(this.BGColorWhiteRadioButton);
+            this.BgColor.Controls.Add(this.BGColorGreyRadioButton);
+            this.BgColor.Controls.Add(this.BGColorBlackRadioButton);
+            this.BgColor.Location = new System.Drawing.Point(8, 56);
+            this.BgColor.Name = "BgColor";
+            this.BgColor.Size = new System.Drawing.Size(335, 55);
+            this.BgColor.TabIndex = 3;
+            this.BgColor.TabStop = false;
+            this.BgColor.Text = "Цвет фона массива";
+            // 
+            // BGColorWhiteRadioButton
+            // 
+            this.BGColorWhiteRadioButton.AutoSize = true;
+            this.BGColorWhiteRadioButton.Location = new System.Drawing.Point(246, 19);
+            this.BGColorWhiteRadioButton.Name = "BGColorWhiteRadioButton";
+            this.BGColorWhiteRadioButton.Size = new System.Drawing.Size(58, 17);
+            this.BGColorWhiteRadioButton.TabIndex = 2;
+            this.BGColorWhiteRadioButton.TabStop = true;
+            this.BGColorWhiteRadioButton.Text = "Белый";
+            this.BGColorWhiteRadioButton.UseVisualStyleBackColor = true;
+            this.BGColorWhiteRadioButton.CheckedChanged += new System.EventHandler(this.BGColorWhiteRadioButton_CheckedChanged);
+            // 
+            // BGColorGreyRadioButton
+            // 
+            this.BGColorGreyRadioButton.AutoSize = true;
+            this.BGColorGreyRadioButton.Location = new System.Drawing.Point(27, 19);
+            this.BGColorGreyRadioButton.Name = "BGColorGreyRadioButton";
+            this.BGColorGreyRadioButton.Size = new System.Drawing.Size(58, 17);
+            this.BGColorGreyRadioButton.TabIndex = 1;
+            this.BGColorGreyRadioButton.TabStop = true;
+            this.BGColorGreyRadioButton.Text = "Серый";
+            this.BGColorGreyRadioButton.UseVisualStyleBackColor = true;
+            this.BGColorGreyRadioButton.CheckedChanged += new System.EventHandler(this.BGColorGreyRadioButton_CheckedChanged);
+            // 
+            // BGColorBlackRadioButton
+            // 
+            this.BGColorBlackRadioButton.AutoSize = true;
+            this.BGColorBlackRadioButton.Location = new System.Drawing.Point(125, 19);
+            this.BGColorBlackRadioButton.Name = "BGColorBlackRadioButton";
+            this.BGColorBlackRadioButton.Size = new System.Drawing.Size(65, 17);
+            this.BGColorBlackRadioButton.TabIndex = 0;
+            this.BGColorBlackRadioButton.TabStop = true;
+            this.BGColorBlackRadioButton.Text = "Чёрный";
+            this.BGColorBlackRadioButton.UseVisualStyleBackColor = true;
+            this.BGColorBlackRadioButton.CheckedChanged += new System.EventHandler(this.BGColorBlackRadioButton_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -300,7 +397,7 @@ namespace GUI_Pril
             this.groupBox1.Controls.Add(this.BlurBGRadioButton);
             this.groupBox1.Location = new System.Drawing.Point(8, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 47);
+            this.groupBox1.Size = new System.Drawing.Size(337, 47);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбор цвета текста миссива";
@@ -341,6 +438,26 @@ namespace GUI_Pril
             this.BlurBGRadioButton.UseVisualStyleBackColor = true;
             this.BlurBGRadioButton.CheckedChanged += new System.EventHandler(this.BlurBGRadioButton_CheckedChanged);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.CreatorLabel);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(792, 164);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "Справка";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // CreatorLabel
+            // 
+            this.CreatorLabel.AutoSize = true;
+            this.CreatorLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreatorLabel.Location = new System.Drawing.Point(20, 66);
+            this.CreatorLabel.Name = "CreatorLabel";
+            this.CreatorLabel.Size = new System.Drawing.Size(741, 27);
+            this.CreatorLabel.TabIndex = 0;
+            this.CreatorLabel.Text = "Работу выполнили Миронов Е.В. и Звягин Н.В. студенты 28-тп группы";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,8 +474,14 @@ namespace GUI_Pril
             this.SecondTabPage.ResumeLayout(false);
             this.SecondTabPage.PerformLayout();
             this.tabPage1.ResumeLayout(false);
+            this.Interface.ResumeLayout(false);
+            this.Interface.PerformLayout();
+            this.BgColor.ResumeLayout(false);
+            this.BgColor.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -392,6 +515,15 @@ namespace GUI_Pril
         private System.Windows.Forms.RadioButton GreenBGRadioButton;
         private System.Windows.Forms.RadioButton BlackBGRadioButton;
         private System.Windows.Forms.RadioButton BlurBGRadioButton;
+        private System.Windows.Forms.GroupBox BgColor;
+        private System.Windows.Forms.RadioButton BGColorWhiteRadioButton;
+        private System.Windows.Forms.RadioButton BGColorGreyRadioButton;
+        private System.Windows.Forms.RadioButton BGColorBlackRadioButton;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label CreatorLabel;
+        private System.Windows.Forms.GroupBox Interface;
+        private System.Windows.Forms.RadioButton DarkRadioButton;
+        private System.Windows.Forms.RadioButton WhiteRadioButton;
     }
 }
 
