@@ -156,6 +156,14 @@ namespace GUI_Pril
                 this.arrayGrid.DefaultCellStyle.ForeColor = Color.Black;
             }
         }
+        /*Переключение текста массива на белый*/
+        private void WhiteBGRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (WhiteBGRadioButton.Checked)
+            {
+                this.arrayGrid.DefaultCellStyle.ForeColor = Color.White;
+            }
+        }
         /*Изменение фона массива на чёрный*/
         private void BGColorBlackRadioButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -185,15 +193,27 @@ namespace GUI_Pril
         {
             if(DarkRadioButton.Checked)
             {
-                this.InsertTabControl.ForeColor = Color.Gray;
-                this.InsertTabControl.BackColor = Color.DarkGray;
+                this.InsertTabControl.ForeColor = Color.White;
+                this.SettingColoreTextArray.ForeColor = Color.White;
+                this.BgColor.ForeColor = Color.White;
+                this.Interface.ForeColor = Color.White;
+                this.FirstTabPage.BackColor = Color.Black;
+                this.SecondTabPage.BackColor = Color.Black;
+                this.SettingPage.BackColor = Color.Black;
+                this.CreatorPage.BackColor = Color.Black;
             }
         }
 
         private void WhiteRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             this.InsertTabControl.ForeColor = Color.Black;
-            this.InsertTabControl.BackColor = Color.White;
+            this.SettingColoreTextArray.ForeColor = Color.Black;
+            this.BgColor.ForeColor = Color.Black;
+            this.Interface.ForeColor = Color.Black;
+            this.FirstTabPage.BackColor = Color.White;
+            this.SecondTabPage.BackColor = Color.White;
+            this.SettingPage.BackColor = Color.White;
+            this.CreatorPage.BackColor = Color.White;
         }
     }
 }
