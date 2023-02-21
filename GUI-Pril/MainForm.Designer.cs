@@ -60,12 +60,13 @@ namespace GUI_Pril
             this.BGColorGreyRadioButton = new System.Windows.Forms.RadioButton();
             this.BGColorBlackRadioButton = new System.Windows.Forms.RadioButton();
             this.SettingColoreTextArray = new System.Windows.Forms.GroupBox();
+            this.WhiteBGRadioButton = new System.Windows.Forms.RadioButton();
             this.GreenBGRadioButton = new System.Windows.Forms.RadioButton();
             this.BlackBGRadioButton = new System.Windows.Forms.RadioButton();
             this.BlurBGRadioButton = new System.Windows.Forms.RadioButton();
             this.CreatorPage = new System.Windows.Forms.TabPage();
             this.CreatorLabel = new System.Windows.Forms.Label();
-            this.WhiteBGRadioButton = new System.Windows.Forms.RadioButton();
+            this.TransButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.arrayGrid)).BeginInit();
             this.InsertTabControl.SuspendLayout();
             this.FirstTabPage.SuspendLayout();
@@ -173,6 +174,7 @@ namespace GUI_Pril
             // 
             // SecondTabPage
             // 
+            this.SecondTabPage.Controls.Add(this.TransButton);
             this.SecondTabPage.Controls.Add(this.SumButton);
             this.SecondTabPage.Controls.Add(this.MidButton);
             this.SecondTabPage.Controls.Add(this.MinButton);
@@ -195,7 +197,7 @@ namespace GUI_Pril
             // 
             // SumButton
             // 
-            this.SumButton.Location = new System.Drawing.Point(374, 126);
+            this.SumButton.Location = new System.Drawing.Point(338, 96);
             this.SumButton.Name = "SumButton";
             this.SumButton.Size = new System.Drawing.Size(191, 20);
             this.SumButton.TabIndex = 11;
@@ -205,7 +207,7 @@ namespace GUI_Pril
             // 
             // MidButton
             // 
-            this.MidButton.Location = new System.Drawing.Point(375, 95);
+            this.MidButton.Location = new System.Drawing.Point(339, 65);
             this.MidButton.Name = "MidButton";
             this.MidButton.Size = new System.Drawing.Size(190, 20);
             this.MidButton.TabIndex = 10;
@@ -215,7 +217,7 @@ namespace GUI_Pril
             // 
             // MinButton
             // 
-            this.MinButton.Location = new System.Drawing.Point(374, 64);
+            this.MinButton.Location = new System.Drawing.Point(338, 34);
             this.MinButton.Name = "MinButton";
             this.MinButton.Size = new System.Drawing.Size(191, 20);
             this.MinButton.TabIndex = 9;
@@ -225,7 +227,7 @@ namespace GUI_Pril
             // 
             // MaxButton
             // 
-            this.MaxButton.Location = new System.Drawing.Point(374, 34);
+            this.MaxButton.Location = new System.Drawing.Point(338, 4);
             this.MaxButton.Name = "MaxButton";
             this.MaxButton.Size = new System.Drawing.Size(191, 23);
             this.MaxButton.TabIndex = 8;
@@ -235,28 +237,28 @@ namespace GUI_Pril
             // 
             // SumVulueTextBox
             // 
-            this.SumVulueTextBox.Location = new System.Drawing.Point(256, 127);
+            this.SumVulueTextBox.Location = new System.Drawing.Point(220, 97);
             this.SumVulueTextBox.Name = "SumVulueTextBox";
             this.SumVulueTextBox.Size = new System.Drawing.Size(100, 20);
             this.SumVulueTextBox.TabIndex = 7;
             // 
             // MidleVulueTextBox
             // 
-            this.MidleVulueTextBox.Location = new System.Drawing.Point(256, 95);
+            this.MidleVulueTextBox.Location = new System.Drawing.Point(220, 65);
             this.MidleVulueTextBox.Name = "MidleVulueTextBox";
             this.MidleVulueTextBox.Size = new System.Drawing.Size(100, 20);
             this.MidleVulueTextBox.TabIndex = 6;
             // 
             // MinVulueTextBox
             // 
-            this.MinVulueTextBox.Location = new System.Drawing.Point(257, 64);
+            this.MinVulueTextBox.Location = new System.Drawing.Point(221, 34);
             this.MinVulueTextBox.Name = "MinVulueTextBox";
             this.MinVulueTextBox.Size = new System.Drawing.Size(100, 20);
             this.MinVulueTextBox.TabIndex = 5;
             // 
             // MaxVulueTextBox
             // 
-            this.MaxVulueTextBox.Location = new System.Drawing.Point(257, 36);
+            this.MaxVulueTextBox.Location = new System.Drawing.Point(221, 6);
             this.MaxVulueTextBox.Name = "MaxVulueTextBox";
             this.MaxVulueTextBox.Size = new System.Drawing.Size(100, 20);
             this.MaxVulueTextBox.TabIndex = 4;
@@ -264,7 +266,7 @@ namespace GUI_Pril
             // SumVulueLabel
             // 
             this.SumVulueLabel.AutoSize = true;
-            this.SumVulueLabel.Location = new System.Drawing.Point(50, 127);
+            this.SumVulueLabel.Location = new System.Drawing.Point(14, 97);
             this.SumVulueLabel.Name = "SumVulueLabel";
             this.SumVulueLabel.Size = new System.Drawing.Size(138, 13);
             this.SumVulueLabel.TabIndex = 3;
@@ -273,7 +275,7 @@ namespace GUI_Pril
             // MidleVulueLabel
             // 
             this.MidleVulueLabel.AutoSize = true;
-            this.MidleVulueLabel.Location = new System.Drawing.Point(50, 95);
+            this.MidleVulueLabel.Location = new System.Drawing.Point(14, 65);
             this.MidleVulueLabel.Name = "MidleVulueLabel";
             this.MidleVulueLabel.Size = new System.Drawing.Size(147, 13);
             this.MidleVulueLabel.TabIndex = 2;
@@ -282,7 +284,7 @@ namespace GUI_Pril
             // MinVulueLabel
             // 
             this.MinVulueLabel.AutoSize = true;
-            this.MinVulueLabel.Location = new System.Drawing.Point(50, 64);
+            this.MinVulueLabel.Location = new System.Drawing.Point(14, 34);
             this.MinVulueLabel.Name = "MinVulueLabel";
             this.MinVulueLabel.Size = new System.Drawing.Size(175, 13);
             this.MinVulueLabel.TabIndex = 1;
@@ -291,7 +293,7 @@ namespace GUI_Pril
             // MaxVulueLabel
             // 
             this.MaxVulueLabel.AutoSize = true;
-            this.MaxVulueLabel.Location = new System.Drawing.Point(50, 36);
+            this.MaxVulueLabel.Location = new System.Drawing.Point(14, 6);
             this.MaxVulueLabel.Name = "MaxVulueLabel";
             this.MaxVulueLabel.Size = new System.Drawing.Size(181, 13);
             this.MaxVulueLabel.TabIndex = 0;
@@ -405,6 +407,18 @@ namespace GUI_Pril
             this.SettingColoreTextArray.TabStop = false;
             this.SettingColoreTextArray.Text = "Выбор цвета текста миссива";
             // 
+            // WhiteBGRadioButton
+            // 
+            this.WhiteBGRadioButton.AutoSize = true;
+            this.WhiteBGRadioButton.Location = new System.Drawing.Point(347, 17);
+            this.WhiteBGRadioButton.Name = "WhiteBGRadioButton";
+            this.WhiteBGRadioButton.Size = new System.Drawing.Size(58, 17);
+            this.WhiteBGRadioButton.TabIndex = 4;
+            this.WhiteBGRadioButton.TabStop = true;
+            this.WhiteBGRadioButton.Text = "Белый";
+            this.WhiteBGRadioButton.UseVisualStyleBackColor = true;
+            this.WhiteBGRadioButton.CheckedChanged += new System.EventHandler(this.WhiteBGRadioButton_CheckedChanged);
+            // 
             // GreenBGRadioButton
             // 
             this.GreenBGRadioButton.AutoSize = true;
@@ -461,17 +475,15 @@ namespace GUI_Pril
             this.CreatorLabel.TabIndex = 0;
             this.CreatorLabel.Text = "Работу выполнили Миронов Е.В. и Звягин Н.В. студенты 28-тп группы";
             // 
-            // WhiteBGRadioButton
+            // TransButton
             // 
-            this.WhiteBGRadioButton.AutoSize = true;
-            this.WhiteBGRadioButton.Location = new System.Drawing.Point(347, 17);
-            this.WhiteBGRadioButton.Name = "WhiteBGRadioButton";
-            this.WhiteBGRadioButton.Size = new System.Drawing.Size(58, 17);
-            this.WhiteBGRadioButton.TabIndex = 4;
-            this.WhiteBGRadioButton.TabStop = true;
-            this.WhiteBGRadioButton.Text = "Белый";
-            this.WhiteBGRadioButton.UseVisualStyleBackColor = true;
-            this.WhiteBGRadioButton.CheckedChanged += new System.EventHandler(this.WhiteBGRadioButton_CheckedChanged);
+            this.TransButton.Location = new System.Drawing.Point(17, 122);
+            this.TransButton.Name = "TransButton";
+            this.TransButton.Size = new System.Drawing.Size(170, 23);
+            this.TransButton.TabIndex = 12;
+            this.TransButton.Text = "Транспониравать матрицу";
+            this.TransButton.UseVisualStyleBackColor = true;
+            this.TransButton.Click += new System.EventHandler(this.TransButton_Click);
             // 
             // MainForm
             // 
@@ -541,6 +553,7 @@ namespace GUI_Pril
         private System.Windows.Forms.RadioButton DarkRadioButton;
         private System.Windows.Forms.RadioButton WhiteRadioButton;
         private System.Windows.Forms.RadioButton WhiteBGRadioButton;
+        private System.Windows.Forms.Button TransButton;
     }
 }
 

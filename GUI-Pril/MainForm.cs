@@ -215,5 +215,28 @@ namespace GUI_Pril
             this.SettingPage.BackColor = Color.White;
             this.CreatorPage.BackColor = Color.White;
         }
+
+        private void TransButton_Click(object sender, EventArgs e)
+        {
+            int[,] trans = new int[int.Parse(ColumnsTextBox.Text), int.Parse(RowsTextBox.Text)];
+            int tmp;
+            for (int i = 0; i < int.Parse(RowsTextBox.Text); i++)
+            {
+                for (int j = 0; j < int.Parse(ColumnsTextBox.Text); j++)
+                {
+                    trans[i, j] = Convert.ToInt32(arrayGrid.Rows[i].Cells[j].Value);
+                    tmp = trans[i, j];
+                    trans[i, j] = trans[j, i];
+                    trans[i, j] = tmp;
+                }
+            }
+            for (int i = 0; i < int.Parse(RowsTextBox.Text); i++)
+            {
+                for (int j = 0; j < int.Parse(ColumnsTextBox.Text); j++)
+                {
+                    arrayGrid.Rows[i].Cells[j].Value = trans[j, i];
+                }
+            }
+        }
     }
 }
