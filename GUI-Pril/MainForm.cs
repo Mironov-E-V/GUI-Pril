@@ -132,6 +132,21 @@ namespace GUI_Pril
             }
             SumVulueTextBox.Text = Convert.ToString(sum);
         }
+        private void SumMainDbutton_Click(object sender, EventArgs e)
+        {
+            int Sumd = 0;
+            for (int i = 0; i < int.Parse(RowsTextBox.Text); i++)
+            {
+                for (int j = 0; j < int.Parse(ColumnsTextBox.Text); j++)
+                {
+                    if (i == j)
+                    {
+                        Sumd += Convert.ToInt32(arrayGrid.Rows[i].Cells[j].Value);
+                    }
+                }
+                SumMainDtextBox.Text = Convert.ToString(Sumd);
+            }
+        }
         /*Переключение текста массива на голубой*/
         private void BlurBGRadioButton_CheckedChanged(object sender, EventArgs e)
         {

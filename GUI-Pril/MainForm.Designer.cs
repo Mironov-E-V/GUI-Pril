@@ -39,6 +39,10 @@ namespace GUI_Pril
             this.CountColumnsLabel = new System.Windows.Forms.Label();
             this.CountRowsLabel = new System.Windows.Forms.Label();
             this.SecondTabPage = new System.Windows.Forms.TabPage();
+            this.SumMainDbutton = new System.Windows.Forms.Button();
+            this.SumMainDtextBox = new System.Windows.Forms.TextBox();
+            this.SumMainDLabel = new System.Windows.Forms.Label();
+            this.TransButton = new System.Windows.Forms.Button();
             this.SumButton = new System.Windows.Forms.Button();
             this.MidButton = new System.Windows.Forms.Button();
             this.MinButton = new System.Windows.Forms.Button();
@@ -66,7 +70,6 @@ namespace GUI_Pril
             this.BlurBGRadioButton = new System.Windows.Forms.RadioButton();
             this.CreatorPage = new System.Windows.Forms.TabPage();
             this.CreatorLabel = new System.Windows.Forms.Label();
-            this.TransButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.arrayGrid)).BeginInit();
             this.InsertTabControl.SuspendLayout();
             this.FirstTabPage.SuspendLayout();
@@ -174,6 +177,9 @@ namespace GUI_Pril
             // 
             // SecondTabPage
             // 
+            this.SecondTabPage.Controls.Add(this.SumMainDbutton);
+            this.SecondTabPage.Controls.Add(this.SumMainDtextBox);
+            this.SecondTabPage.Controls.Add(this.SumMainDLabel);
             this.SecondTabPage.Controls.Add(this.TransButton);
             this.SecondTabPage.Controls.Add(this.SumButton);
             this.SecondTabPage.Controls.Add(this.MidButton);
@@ -194,6 +200,42 @@ namespace GUI_Pril
             this.SecondTabPage.TabIndex = 1;
             this.SecondTabPage.Text = "Вычисления";
             this.SecondTabPage.UseVisualStyleBackColor = true;
+            // 
+            // SumMainDbutton
+            // 
+            this.SumMainDbutton.Location = new System.Drawing.Point(339, 123);
+            this.SumMainDbutton.Name = "SumMainDbutton";
+            this.SumMainDbutton.Size = new System.Drawing.Size(193, 21);
+            this.SumMainDbutton.TabIndex = 15;
+            this.SumMainDbutton.Text = "Найти сумму главной диагонали";
+            this.SumMainDbutton.UseVisualStyleBackColor = true;
+            this.SumMainDbutton.Click += new System.EventHandler(this.SumMainDbutton_Click);
+            // 
+            // SumMainDtextBox
+            // 
+            this.SumMainDtextBox.Location = new System.Drawing.Point(221, 123);
+            this.SumMainDtextBox.Name = "SumMainDtextBox";
+            this.SumMainDtextBox.Size = new System.Drawing.Size(100, 20);
+            this.SumMainDtextBox.TabIndex = 14;
+            // 
+            // SumMainDLabel
+            // 
+            this.SumMainDLabel.AutoSize = true;
+            this.SumMainDLabel.Location = new System.Drawing.Point(14, 127);
+            this.SumMainDLabel.Name = "SumMainDLabel";
+            this.SumMainDLabel.Size = new System.Drawing.Size(141, 13);
+            this.SumMainDLabel.TabIndex = 13;
+            this.SumMainDLabel.Text = "Сумма главной диагонали";
+            // 
+            // TransButton
+            // 
+            this.TransButton.Location = new System.Drawing.Point(614, 6);
+            this.TransButton.Name = "TransButton";
+            this.TransButton.Size = new System.Drawing.Size(170, 23);
+            this.TransButton.TabIndex = 12;
+            this.TransButton.Text = "Транспониравать матрицу";
+            this.TransButton.UseVisualStyleBackColor = true;
+            this.TransButton.Click += new System.EventHandler(this.TransButton_Click);
             // 
             // SumButton
             // 
@@ -469,21 +511,11 @@ namespace GUI_Pril
             // 
             this.CreatorLabel.AutoSize = true;
             this.CreatorLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreatorLabel.Location = new System.Drawing.Point(20, 66);
+            this.CreatorLabel.Location = new System.Drawing.Point(95, 70);
             this.CreatorLabel.Name = "CreatorLabel";
-            this.CreatorLabel.Size = new System.Drawing.Size(741, 27);
+            this.CreatorLabel.Size = new System.Drawing.Size(566, 27);
             this.CreatorLabel.TabIndex = 0;
-            this.CreatorLabel.Text = "Работу выполнили Миронов Е.В. и Звягин Н.В. студенты 28-тп группы";
-            // 
-            // TransButton
-            // 
-            this.TransButton.Location = new System.Drawing.Point(17, 122);
-            this.TransButton.Name = "TransButton";
-            this.TransButton.Size = new System.Drawing.Size(170, 23);
-            this.TransButton.TabIndex = 12;
-            this.TransButton.Text = "Транспониравать матрицу";
-            this.TransButton.UseVisualStyleBackColor = true;
-            this.TransButton.Click += new System.EventHandler(this.TransButton_Click);
+            this.CreatorLabel.Text = "Работу выполнил Миронов Е.В. студент 28-тп группы";
             // 
             // MainForm
             // 
@@ -554,6 +586,9 @@ namespace GUI_Pril
         private System.Windows.Forms.RadioButton WhiteRadioButton;
         private System.Windows.Forms.RadioButton WhiteBGRadioButton;
         private System.Windows.Forms.Button TransButton;
+        private System.Windows.Forms.Button SumMainDbutton;
+        private System.Windows.Forms.TextBox SumMainDtextBox;
+        private System.Windows.Forms.Label SumMainDLabel;
     }
 }
 
